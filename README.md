@@ -63,9 +63,19 @@ gradle clean android -Dplatform='android_browserstack'
 
 <a href="https://jenkins.autotests.cloud/job/AD_demo_mobile_wb/"><img src="media/screenshots/JenkinsMobile.png" alt="Jenkins"/></a>
 
-> Для запуска сборки необходимо нажать "Собрать сейчас". Клик по иконкам Allure TestOps и Allure Report позволяет перейти 
-> на просмотр страниц с тестовой документацией и отчетов.
+Параметризованное задание Jenkins может быть запущено с необходимыми параметрами:
+<p  align="center">
+<img src="media/screenshots/Jenkins.png" alt="JenkinsBuildParameters" width="950">
 </p>
+
+Конфиденциальная информация (имена для входа и пароли) хранится в зашифрованном виде в хранилище учетных данных Jenkins.\
+И относительно безопасно передается в сборку аргументами gradle, а его значения маскируются в логах.
+
+После завершения сборки результаты тестирования доступны в:
+>- <code><strong>*Allure Report*</strong></code>
+>- <code><strong>*Allure TestOps*</strong></code> - результаты загружаются туда и тест-кейсы могут автоматически обновляться в соответствии с последними изменениями в коде.
+
+
 
 <a id="allure"></a>
 ## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/AD_demo_mobile_wb/4/allure/) отчеты
@@ -109,8 +119,16 @@ gradle clean android -Dplatform='android_browserstack'
 <img title="telegram bot" src="media/screenshots/mobileBot.png">
 </p>
 
+<a id="telegram"></a>
+## <img src="media/logo/Browserstack.svg" width="25" height="25"/></a> Пример запуска тестов через brawserstac
+
+<p >
+<img title="telegram bot" src="media/screenshots/Browserstack.png">
+</p>
+
 <a id="video"></a>
 ## <img src="media/logo/Browserstack.svg" width="25" height="25"/></a> Пример видео прогона автотеста
+
 
 <p align="center">
   <img title="Browserstack Video" src="media/video/currencyTestCut.gif">
