@@ -93,7 +93,7 @@ gradle clean android -Dplatform='android_browserstack'
 </p>
 
 <a id="allure-testops"></a>
-## <img src="media/logo/Allure_TO.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1910/dashboards)
+## <img src="media/logo/Allure_TO.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/2993/dashboards)
 
 >Allure TestOps поддерживает подход Test cases as a code, что позволяет из кода поддерживать тестовую документацию в актуальном состоянии.
 
