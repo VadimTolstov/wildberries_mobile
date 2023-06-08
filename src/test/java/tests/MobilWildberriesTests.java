@@ -11,6 +11,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 import static io.qameta.allure.Allure.step;
@@ -61,7 +62,7 @@ public class MobilWildberriesTests extends TestBase {
         });
 
         step("Проверяем, что AntistressTOP найден", () -> {
-            //         $(id("com.wildberries.ru:id/brandTitle")).shouldBe(text("AntistressTOP")).shouldBe(visible);
+            $(id("com.wildberries.ru:id/brandTitle")).shouldBe(text("AntistressTOP")).shouldBe(visible);
         });
     }
 

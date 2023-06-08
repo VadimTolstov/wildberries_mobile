@@ -12,6 +12,7 @@ public interface ProjectConfig extends Config {
     @Key("remoteDriverUrl")
     String remoteDriverUrl();
 
+    @DefaultValue("android_browserstack")
     String platform();
 
     @Key("browserstack.user")
@@ -42,6 +43,7 @@ public interface ProjectConfig extends Config {
     String appActivity();
 
     @Key("base_url")
-    @DefaultValue("https://api.browserstack.com/app-automate/sessions/%s.json") //todo
+    @DefaultValue("https://api.browserstack.com/app-automate/sessions/%s.json")
+        //todo
     String getSessionsUrl();
 }

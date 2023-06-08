@@ -54,7 +54,6 @@ dependencies {
             "com.fasterxml.jackson.core:jackson-core:2.13.1",
             "org.aeonbits.owner:owner:1.0.12",
             "org.aspectj:aspectjweaver:1.9.19",
-            "org.aeonbits.owner:owner:1.0.12",
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "io.rest-assured:json-path:$restAssuredVersion",
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
@@ -72,7 +71,7 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform{
+    useJUnitPlatform {
         if (System.getProperty("tag") != null && !System.getProperty("tag").isEmpty()) {
             includeTags System.getProperty("tag")
         }
