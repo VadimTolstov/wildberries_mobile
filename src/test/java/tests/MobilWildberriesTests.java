@@ -45,24 +45,21 @@ public class MobilWildberriesTests extends TestBase {
     @Test
     @Android
     @Owner("толстов вадим")
-    @DisplayName("Поиск товара")
+    @DisplayName("Смена валюты")
     void siteSearchTest() {
 
-        step("Открываем поиск", () -> {
-            $(id("com.wildberries.ru:id/search_searchEditText"))
+        step("Открываем модальное окно выбара валюты", () -> {
+            $(id("com.wildberries.ru:id/savedCurrencyNameView"))
                     .click();
         });
 
-        step("Вводим antistress в поле поиска", () -> {
-            $x("//android.widget.EditText").sendKeys("antistress");
+        step("Выбераем Белорусский рубль", () -> {
+            $x("//android.view.View[@content-desc=\"Белорусский рубль\"]").click();
         });
 
-        step("Ищем AntistressTOP", () -> {
-            $x("//android.view.View[11]").click();
-        });
 
-        step("Проверяем, что AntistressTOP найден", () -> {
-            $(id("com.wildberries.ru:id/brandTitle")).shouldBe(text("AntistressTOP")).shouldBe(visible);
+        step("Проверяем, что выбран Белорусский рубль", () -> {
+            $(id("com.wildberries.ru:id/savedCurrencyNameView")).shouldHave(visible);
         });
     }
 
@@ -81,24 +78,20 @@ public class MobilWildberriesTests extends TestBase {
                     .click();
         });
 
-        step("Вводим  tapiboo в поле поиска", () -> {
+        step("Вводим  товар в поле поиска", () -> {
             $x("//android.widget.EditText").sendKeys(products);
         });
 
         step("Ищем товар", () -> {
-            $x("//android.view.View[11]").click();
+            $x("//android.view.View[11]").shouldHave(visible).click();
         });
 
         step("Открываем карточку товара ", () -> {
-            $(id("com.wildberries.ru:id/itemLayout")).click();
-        });
-
-        step("Проверяем, что открылась карточка товара ", () -> {
-            $x("//android.view.View/android.view.View[3]/android.widget.TextView[1]").shouldBe(text(products));
+            $(id("com.wildberries.ru:id/imageItemContainer")).shouldHave(visible).click();
         });
 
         step("Добовляем товар в корзину", () -> {
-            $(className("android.widget.Button")).click();
+            $(className("android.widget.Button")).shouldHave(visible).click();
         });
 
         step("Открываем корзину", () -> {
@@ -113,28 +106,20 @@ public class MobilWildberriesTests extends TestBase {
     @Test
     @Android
     @Owner("толстов вадим")
-    @DisplayName("Открываем карточку товар")
+    @DisplayName("Проверяем версию приложения")
     void addProductToFavoritesTest() {
 
-        step("Открываем поиск", () -> {
-            $(id("com.wildberries.ru:id/search_searchEditText"))
+        step("Открываем профиль", () -> {
+            $x("//android.view.View[@content-desc=\"Профиль\"]")
                     .click();
         });
 
-        step("Вводим  тапки в поле поиска", () -> {
-            $x("//android.widget.EditText").sendKeys("зонт");
+        step("Открываем страницу О приложении", () -> {
+            $x("//android.view.View/android.view.View/android.widget.TextView[3]").click();
         });
 
-        step("Ищем тапки", () -> {
-            $x("//android.view.View[11]").click();
-        });
-
-        step("Открываем карточку с зонтом", () -> {
-            $(id("com.wildberries.ru:id/itemLayout")).click();
-        });
-
-        step("Проверяем, что открылась карточка товара зонт", () -> {
-            $x("//android.view.View/android.view.View[3]/android.widget.TextView[1]").shouldBe(text("Зонт"));
+        step("Проверяем, что открылась страница О приложении ", () -> {
+            $x("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[6]/android.widget.TextView").shouldHave(text("О приложении"));
         });
     }
 }

@@ -12,7 +12,6 @@ public interface ProjectConfig extends Config {
     @Key("remoteDriverUrl")
     String remoteDriverUrl();
 
-    @DefaultValue("android_browserstack")
     String platform();
 
     @Key("browserstack.user")
