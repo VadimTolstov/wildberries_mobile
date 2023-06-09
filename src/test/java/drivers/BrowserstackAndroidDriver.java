@@ -32,8 +32,8 @@ public class BrowserstackAndroidDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("browserstack.user", config.browserstackUser());
         mutableCapabilities.setCapability("browserstack.key", config.browserstackKey());
         mutableCapabilities.setCapability("app", config.app());
-        mutableCapabilities.setCapability("device", config.getDeviceName());
-        mutableCapabilities.setCapability("os_version", config.getPlatformVersion());
+        mutableCapabilities.setCapability("device", config.deviceName());
+        mutableCapabilities.setCapability("os_version", config.platformVersion());
         mutableCapabilities.setCapability("project", "First Java Project");
         mutableCapabilities.setCapability("language", "ru");
         mutableCapabilities.setCapability("locale", "RU");

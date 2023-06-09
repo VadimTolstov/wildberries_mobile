@@ -20,12 +20,6 @@ public interface ProjectConfig extends Config {
     @Key("browserstack.key")
     String browserstackKey();
 
-    @Key("deviceName")
-    String getDeviceName();
-
-    @Key("platformVersion")
-    String getPlatformVersion();
-
     @Key("app")
     String app();
 
