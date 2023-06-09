@@ -40,7 +40,7 @@
 
 -  Поиск товара в приложении
 -  Добовление товара в корзину
--  Проверка картачки товара
+-  Проверка вкладки О приложении
 
 <a id="console"></a>
 ##  Запуск тестов из терминала
@@ -57,7 +57,7 @@ gradle clean android -Dplatform='android_browserstack'
 ```
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в Jenkins
+## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/wildberries_mobile/) 
 
 <p align="center">
 
@@ -78,7 +78,7 @@ gradle clean android -Dplatform='android_browserstack'
 
 
 <a id="allure"></a>
-## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/AD_demo_mobile_wb/4/allure/) отчеты
+## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/wildberries_mobile/17/allure/) отчеты
 
 ### Основное окно
 
@@ -86,7 +86,7 @@ gradle clean android -Dplatform='android_browserstack'
 <img title="Allure Dashboard" src="media/screenshots/AllureMobile.png">
 </p>
 
-### Тесты
+### [Тесты](https://jenkins.autotests.cloud/job/wildberries_mobile/17/allure/#suites/0f5c00dce9238c2bb4eed24114ca4885)
 
 <p align="center">
 <img title="Allure Tests" src="media/screenshots/AllureTestsMobile.png">
@@ -106,7 +106,7 @@ gradle clean android -Dplatform='android_browserstack'
 </p>
 
 <a id="jira"></a>
-## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-548)
+## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-750)
 
 <p align="center">
 <img title="Jira" src="media/screenshots/jiraMobile.png">
