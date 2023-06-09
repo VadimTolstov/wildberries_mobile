@@ -42,27 +42,6 @@ public class MobilWildberriesTests extends TestBase {
         });
     }
 
-    @Test
-    @Android
-    @Owner("толстов вадим")
-    @DisplayName("Смена валюты")
-    void siteSearchTest() {
-
-        step("Открываем модальное окно выбара валюты", () -> {
-            $(id("com.wildberries.ru:id/savedCurrencyNameView"))
-                    .click();
-        });
-
-        step("Выбераем Белорусский рубль", () -> {
-            $x("//android.view.View[@content-desc=\"Белорусский рубль\"]").click();
-        });
-
-
-        step("Проверяем, что выбран Белорусский рубль", () -> {
-            $(id("com.wildberries.ru:id/savedCurrencyNameView")).shouldHave(visible);
-        });
-    }
-
     @ValueSource(strings = {
             "Зонт", "Кружка"
     })
@@ -119,7 +98,28 @@ public class MobilWildberriesTests extends TestBase {
         });
 
         step("Проверяем, что открылась страница О приложении ", () -> {
-            $x("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[6]/android.widget.TextView").shouldHave(text("О приложении"));
+            $x("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/" +
+               "android.view.View[6]/android.widget.TextView").shouldHave(text("О приложении"));
+        });
+    }
+    @Test
+    @Android
+    @Owner("толстов вадим")
+    @DisplayName("Смена валюты")
+    void siteSearchTest() {
+
+        step("Открываем модальное окно выбара валюты", () -> {
+            $(id("com.wildberries.ru:id/savedCurrencyNameView"))
+                    .click();
+        });
+
+        step("Выбераем Белорусский рубль", () -> {
+            $x("//android.view.View[@content-desc=\"Белорусский рубль\"]").click();
+        });
+
+
+        step("Проверяем, что выбран Белорусский рубль", () -> {
+            $(id("com.wildberries.ru:id/savedCurrencyNameView")).shouldHave(visible);
         });
     }
 }
