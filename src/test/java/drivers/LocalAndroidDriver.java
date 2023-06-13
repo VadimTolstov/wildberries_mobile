@@ -49,7 +49,7 @@ public class LocalAndroidDriver implements WebDriverProvider {
     }
 
     private File getAppPath() {
-        return new File("src/test/resources/apk/Wildberries_5.1.2000_Apkpure.apk");
+        return new File("src/test/resources/apk/Wildberries_5.1.3000_Apkpure.apk");
 
 
     }
