@@ -48,7 +48,7 @@
 ### Локальный запуск тестов
 
 ```
-gradle clean android_test -Dplatform='android_emulator'
+gradle clean android -Dplatform='android_emulator'
 ```
 
 ### Удаленный запуск тестов
