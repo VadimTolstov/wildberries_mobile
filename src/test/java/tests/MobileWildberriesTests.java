@@ -10,8 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 import static io.qameta.allure.Allure.step;
@@ -20,7 +21,7 @@ import static org.openqa.selenium.By.id;
 
 @Owner("толстов вадим")
 @Epic("Android UI tests wildberries")
-public class MobilWildberriesTests extends TestBase {
+public class MobileWildberriesTests extends TestBase {
 
 
     @BeforeEach
@@ -62,15 +63,17 @@ public class MobilWildberriesTests extends TestBase {
         });
 
         step("Ищем товар", () -> {
-            $x("//android.view.View[11]").shouldHave(visible).click();
+            $x("//android.view.View[11]").should(disappear, Duration.ofSeconds(5));
+            $x("//android.view.View[11]").click();
         });
 
         step("Открываем карточку товара ", () -> {
-            $(id("com.wildberries.ru:id/imageItemContainer")).shouldHave(visible).click();
+            $x("//android.widget.GridView/android.widget.FrameLayout[2]/android.view.ViewGroup/android.widget.TextView[2]").should(disappear, Duration.ofSeconds(6));
+            $x("//android.widget.GridView/android.widget.FrameLayout[2]/android.view.ViewGroup/android.widget.TextView[2]").click();
         });
 
         step("Добовляем товар в корзину", () -> {
-            $(className("android.widget.Button")).shouldHave(visible).click();
+            $(className("android.widget.Button")).click();
         });
 
         step("Открываем корзину", () -> {
@@ -102,6 +105,7 @@ public class MobilWildberriesTests extends TestBase {
                "android.view.View[6]/android.widget.TextView").shouldHave(text("О приложении"));
         });
     }
+
     @Test
     @Android
     @Owner("толстов вадим")
