@@ -63,7 +63,7 @@ public class MobileWildberriesTests extends TestBase {
         });
 
         step("Ищем товар", () -> {
-            $x("//android.view.View[11]").should(disappear, Duration.ofSeconds(5));
+            $x("//android.view.View/android.view.View/android.view.View/android.view.View/android.view.View").should(disappear, Duration.ofSeconds(5));
             $x("//android.view.View[11]").click();
         });
 

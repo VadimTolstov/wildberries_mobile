@@ -58,7 +58,7 @@ gradle clean android -Dplatform='android_browserstack'
 ```
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/wildberries_mobile/) 
+## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/wildberries_mobile/) 
 
 <p align="center">
 
